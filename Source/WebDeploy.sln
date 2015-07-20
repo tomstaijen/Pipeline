@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinRemote", "WinRemote\WinR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinRemote.Test", "WinRemote.Test\WinRemote.Test.csproj", "{14EA46EA-B6D2-4473-B4A0-71AEC032A0A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azure", "Azure\Azure.csproj", "{8F6892D8-9382-45D5-948B-A57ED5EC3A1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{14EA46EA-B6D2-4473-B4A0-71AEC032A0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14EA46EA-B6D2-4473-B4A0-71AEC032A0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14EA46EA-B6D2-4473-B4A0-71AEC032A0A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F6892D8-9382-45D5-948B-A57ED5EC3A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F6892D8-9382-45D5-948B-A57ED5EC3A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F6892D8-9382-45D5-948B-A57ED5EC3A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F6892D8-9382-45D5-948B-A57ED5EC3A1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

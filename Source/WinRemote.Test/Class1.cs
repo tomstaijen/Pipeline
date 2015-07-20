@@ -15,8 +15,9 @@ namespace WinRemote.Test
         {
             var remote = new Remote();
 
-            Print(remote.ExecutionPolicy());
-            Print(remote.InstallChoco());
+//            Print(remote.ExecutionPolicy());
+//            Print(remote.InstallChoco());
+            Print(remote.InstallIISManagementSnapin());
 //            foreach (var x in remote.InstallChoco())
 //            {
 //                Console.WriteLine(x);

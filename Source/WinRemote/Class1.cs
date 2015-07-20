@@ -34,21 +34,26 @@ namespace WinRemote
         public ICollection<dynamic> InstallIISManagementSnapin()
         {
             var script = @"
-$iisVersion = Get-ItemProperty ""HKLM:\\software\\microsoft\\InetStp"";
-if ($iisVersion.MajorVersion -eq 7)
 {
-    if ($iisVersion.MinorVersion -ge 5)
+    $iisVersion = Get-ItemProperty ""HKLM:\\software\\microsoft\\InetStp"";
+    if ($iisVersion.MajorVersion -eq 7)
     {
-        Import-Module WebAdministration;
-    }           
-    else
-    {
-        if (-not (Get-PSSnapIn | Where {$_.Name -eq ""WebAdministration"";})) {
-            Add-PSSnapIn WebAdministration;
+        if ($iisVersion.MinorVersion -ge 5)
+        {
+            Import-Module WebAdministration;
+        }           
+        else
+        {
+            if (-not (Get-PSSnapIn | Where {$_.Name -eq ""WebAdministration"";})) {
+                Add-PSSnapIn WebAdministration;
+            }
         }
     }
 }
-";
+"
+;
+            var manager = new Naos.WinRM.MachineManager("192.168.1.239", "Administrator", MachineManager.ConvertStringToSecureString("Spe11ilm12"), true);
+            return manager.RunScript(script);
         }
 
         public ICollection<dynamic> ExecutionPolicy()
